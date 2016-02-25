@@ -16,5 +16,6 @@ myApp
 //very common pattern here
 myApp.controller('MyController', ['$scope', function ($scope) {
   $scope.myFirstName = "Gail";
+  $scope.myModel = "Ready Player One";
 }]);
 
