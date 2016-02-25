@@ -1,8 +1,12 @@
 var myApp = angular.module('myApp');
 
-//parameter can be changed to anything
-//very common pattern here
-myApp.controller('MyController', ['$scope', function ($scope) {
-  $scope.myFirstName = "Gail";
-  $scope.myModel = "Ready Player One";
-}]);
+myApp.controller('MyController', [
+  '$scope',
+  'mainCharacter',
+  //parameter can be changed to anything
+  function ($scope, mainCharacter) {
+    $scope.myFirstName = "Gail";
+    $scope.myModel = "Ready Player One";
+    $scope.mainCharacter = mainCharacter;
+  }
+]);
