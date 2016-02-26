@@ -1,5 +1,5 @@
 //you would put other dependencies you're dependent on in []
-angular.module('myApp',['ngRoute']);
+angular.module('myApp',['ngRoute', 'ngAnimate']);
 
 var myApp = angular.module('myApp');
 
