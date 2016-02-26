@@ -1,0 +1,17 @@
+ <h1>1983 Movies</h1>
+    <ul>
+      <li ng-repeat="movie in movies | filter:{ year: 1983 }">
+      <h4 class="movie_title">{{ movie.title }}</h4>
+      <p class="movie_year">{{ movie.year }}</p>
+      </li>
+    </ul>
+
+    <h1>Movies Before {{beforeYear}}</h1>
+    <input type="number" ng-model="beforeYear" ng-init="beforeYear=2000">
+    <ul>
+      <li ng-repeat="movie in movies | beforeYearFilter:beforeYear | orderBy:'-title'">
+      <h4 class="movie_title">{{ movie.title }}</h4>
+      <p class="movie_year">{{ movie.year }}</p>
+      </li>
+    </ul>
+  </div>
