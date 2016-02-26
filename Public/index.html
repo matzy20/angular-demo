@@ -34,6 +34,14 @@
       </li>
     </ul>
     {{ movies }}
+
+    <h1>1983 Movies</h1>
+    <ul>
+      <li ng-repeat="movie in movies | filter:{ year: 1983 }">
+      <h4 class="movie_title">{{ movie.title }}</h4>
+      <p class="movie_year">{{ movie.year }}</p>
+      </li>
+    </ul>
   </div>
 
   Version: {{ version }}
