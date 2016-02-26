@@ -15,6 +15,11 @@ myApp.controller('MyController', [
     $scope.books = BookService.getBooks();
     //binding to scope, anything exposed here just making Public
     $scope.BookService = BookService;
-    $scope.Movies = Movies;
+    //empty array due to ajax request, assuming movies is an []
+    $scope.movies = [];
+    //promise needs a then
+    Movies.get().then(function (response){
+      $scope.movies = response.data;
+    });
   }
 ]);
