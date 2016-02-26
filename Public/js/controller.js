@@ -12,5 +12,7 @@ myApp.controller('MyController', [
     $scope.mainCharacter = mainCharacter;
     $scope.characterVersion = CharacterVersionFactory;
     $scope.books = BookService.getBooks();
+    //binding to scope, anything exposed here just making Public
+    $scope.BookService = BookService;
   }
 ]);

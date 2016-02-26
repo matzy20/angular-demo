@@ -6,15 +6,26 @@ myApp.service('BookService', BookService);
 
 //able to do an instance of the service
 function BookService () {
-  var books = [
+  //making books public
+  //able to ref. outside due to this.getBooks
+  var books = this.books =[
    {title:'Ready Player One', author: 'Some Body'},
 {title:'LuckyEveryday', author: 'Some Body'},
 {title:'Harry Potter', author: 'Some Body'},
 {title:'Last Lecture', author: 'Some Body'},
   ];
 
+  this.addBook = function (title, author) {
+    var newBook = {
+      title: title,
+      author: author
+    };
+    //instantiate newBook passed in
+    books.push(newBook);
+  };
+
   this.getBooks = function () {
-    return books;
+    return this.books;
   };
 
   this.getBook = function (index) {

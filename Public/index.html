@@ -19,6 +19,14 @@
       Main character: {{ mainCharacter }}
     </div>
       Character version: {{ characterVersion }}
+
+      <form>
+        <input type="text" ng-model="title">
+        <input type="text" ng-model="author"></input>
+        <button ng-click="BookService.addBook(title, author); title=''; author='';">
+          Add Book
+        </button>
+      </form>
     <ul>
       <li class="book special" ng-repeat="book in books">
         <h4 class="book_title">{{ book.title }}</h4>
