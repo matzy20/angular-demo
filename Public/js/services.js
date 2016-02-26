@@ -7,10 +7,10 @@ myApp.service('BookService', BookService);
 //able to do an instance of the service
 function BookService () {
   var books = [
-   'Ready Player One',
-   'LuckyEveryday',
-   'Harry Potter',
-   'Last Lecture'
+   {title:'Ready Player One', author: 'Some Body'},
+{title:'LuckyEveryday', author: 'Some Body'},
+{title:'Harry Potter', author: 'Some Body'},
+{title:'Last Lecture', author: 'Some Body'},
   ];
 
   this.getBooks = function () {

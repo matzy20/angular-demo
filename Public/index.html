@@ -19,9 +19,12 @@
       Main character: {{ mainCharacter }}
     </div>
       Character version: {{ characterVersion }}
-    <div>
-      Books: {{ books }}
-    </div>
+    <ul>
+      <li class="book special" ng-repeat="book in books">
+        <h4 class="book_title">{{ book.title }}</h4>
+        <p class="book_author">{{ book.author }}</p>
+      </li>
+    </ul>
   </div>
 
   Version: {{ version }}
