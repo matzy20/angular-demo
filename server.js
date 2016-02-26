@@ -7,7 +7,7 @@ app.use(express.static(path.resolve(__dirname, 'Public')));
 
 app.use('/api', function (req, res, next){
   var movies = [
-    {title: 'Hobbit', year: 2000},
+    {title: 'Hobbit', year: 2012},
     {title: 'Star Wars: Episode IV - Return of the Jedi', year: 1983},
     {title: 'Pretty Woman', year: 1999},
     {title: 'Pirates of the Caribbean', year: 2005},
