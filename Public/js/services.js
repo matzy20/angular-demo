@@ -4,15 +4,15 @@ var myApp = angular.module('myApp');
 //can include [] next to BookService to pass into
 myApp.service('BookService', BookService);
 
-//able to do an instance of the service
+//able to do an INSTANCE of the service
 function BookService () {
   //making books public
   //able to ref. outside due to this.getBooks
   var books = this.books =[
    {title:'Ready Player One', author: 'Some Body'},
-{title:'LuckyEveryday', author: 'Some Body'},
-{title:'Harry Potter', author: 'Some Body'},
-{title:'Last Lecture', author: 'Some Body'},
+  {title:'LuckyEveryday', author: 'Some Body'},
+  {title:'Harry Potter', author: 'Some Body'},
+  {title:'Last Lecture', author: 'Some Body'},
   ];
 
   this.addBook = function (title, author) {

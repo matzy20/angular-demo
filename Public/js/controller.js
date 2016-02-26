@@ -6,7 +6,8 @@ myApp.controller('MyController', [
   'mainCharacter',
   'CharacterVersionFactory',
   'BookService',
-  function ($scope, mainCharacter, CharacterVersionFactory, BookService) {
+  'Movies',
+  function ($scope, mainCharacter, CharacterVersionFactory, BookService, Movies) {
     $scope.myFirstName = "Gail";
     $scope.myModel = "Ready Player One";
     $scope.mainCharacter = mainCharacter;
@@ -14,5 +15,6 @@ myApp.controller('MyController', [
     $scope.books = BookService.getBooks();
     //binding to scope, anything exposed here just making Public
     $scope.BookService = BookService;
+    $scope.Movies = Movies;
   }
 ]);
